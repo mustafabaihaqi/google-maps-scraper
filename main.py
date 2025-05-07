@@ -189,7 +189,7 @@ def main():
                     address_xpath = '//button[@data-item-id="address"]//div[contains(@class, "fontBodyMedium")]'
                     website_xpath = '//a[@data-item-id="authority"]//div[contains(@class, "fontBodyMedium")]'
                     phone_number_xpath = '//button[contains(@data-item-id, "phone:tel:")]//div[contains(@class, "fontBodyMedium")]'
-                    review_count_xpath = '//button[@jsaction="pane.reviewChart.moreReviews"]//span'
+                    review_count_xpath = '//div[@jsaction="pane.reviewChart.moreReviews"]//span'
                     reviews_average_xpath = '//div[@jsaction="pane.reviewChart.moreReviews"]//div[@role="img"]'
                     permanently_closed_xpath = '//div/span/span[contains(text(), "Tutup permanen")]'
                     latest_review_date_xpath = '//div[contains(@class,"XiKgde")]/div[1]/div[1]/div[1]/div[4]/div[1]/span[contains(text(), "lalu")]'

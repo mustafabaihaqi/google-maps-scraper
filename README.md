@@ -27,11 +27,11 @@ A typical workflow of scraping data is as follows:
  `python main.py -s=<what & where to search for> -t=<how many>`
  2. Run combine.py to combine multiple xlsx files into one file. Then, move the generated xlsx file into combined folder.
  `python combine.py -i=<txt file listing all the xlsx files that want to be combined> -o=<output xlsx file>`
- 3. Run remove_deduplication.py to remove rows that have the same name value except for the first  duplicated row. Then, move the generated xlsx file into dedup folder.
+ 3. Run remove_deduplication.py to remove rows that have the same name value except for the first duplicated row. Then, move the generated xlsx file into dedup folder.
  `python remove_deduplication.py <input xlsx file> <output xlsx file>` 
  4. Run detect_duplication.py to see the duplicated rows in the deduplicated xlsx file. This is important to make it easy to debug if there is a problem. Then, move the generated xlsx file into dup folder.
  `python detect_duplication.py <input xlsx file> <output xlsx file>` 
-5. Run remove_sequential_deduplication.py to remove rows that  have the same name value except for the first duplicated row. Then, move the generated xlsx file into dup2 folder.
+5. Run remove_sequential_deduplication.py to remove rows that  have the same address value except for the first duplicated row. Then, move the generated xlsx file into dup2 folder.
  `python remove_sequential_deduplication.py <input xlsx file> <output xlsx file>`
 6. Run detect_deduplication.py again on the previously generated xlsx file. This is done to see whether there still exists duplicated rows. If there is a duplicated row. We can use this data to decide what to do with the duplicated data in the xlsx file. 
   `python detect_duplication.py <input xlsx file> <output xlsx file>` 
