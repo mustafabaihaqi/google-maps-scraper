@@ -64,13 +64,6 @@ class BusinessList:
             os.makedirs(self.save_at)
         self.dataframe().to_csv(f"output/{filename}.csv", index=False)
 
-def extract_coordinates_from_url(url: str) -> tuple[float,float]:
-    """helper function to extract coordinates from url"""
-    
-    coordinates = url.split('/@')[-1].split('/')[0]
-    # return latitude, longitude
-    return float(coordinates.split(',')[0]), float(coordinates.split(',')[1])
-
 def main():
     
     ########
