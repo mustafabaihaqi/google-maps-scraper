@@ -1,5 +1,1 @@
-google_maps_data_Klinik_Bantul.xlsx
-google_maps_data_Klinik_Gunungkidul.xlsx
-google_maps_data_Klinik_Kota_Yogyakarta.xlsx
-google_maps_data_Klinik_Kulon_Progo.xlsx
-google_maps_data_Klinik_Sleman.xlsx
+google_maps_data_TK_Daerah_Istimewa_Yogyakarta.xlsx
