@@ -59,13 +59,7 @@ def main():
         sys.exit(1)
 
     # Eliminate duplicate rows
-    combined_data.drop_duplicates(inplace=True)
-
-    # Sort the rows based on the 'name' column
-    # if "name" in combined_data.columns:
-    #     combined_data.sort_values(by="name", inplace=True)
-    # else:
-    #     print("Warning: 'name' column not found. Sorting skipped.")
+    # combined_data.drop_duplicates(inplace=True)
 
     # Save the combined data to the output Excel file
     output_file = args.output
