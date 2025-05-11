@@ -1,6 +1,3 @@
-"""This script serves as an example on how to use Python 
-   & Playwright to scrape/extract data from Google Maps"""
-
 from playwright.sync_api import sync_playwright
 from dataclasses import dataclass, asdict, field
 import pandas as pd
@@ -11,7 +8,6 @@ import sys
 @dataclass
 class Business:
     """holds business data"""
-
     name: str = None
     address: str = None
     website: str = None
@@ -53,23 +49,10 @@ class BusinessList:
             os.makedirs(self.save_at)
         self.dataframe().to_excel(f"output/{filename}.xlsx", index=False)
 
-    def save_to_csv(self, filename):
-        """saves pandas dataframe to csv file
-
-        Args:
-            filename (str): filename
-        """
-
-        if not os.path.exists(self.save_at):
-            os.makedirs(self.save_at)
-        self.dataframe().to_csv(f"output/{filename}.csv", index=False)
-
 def main():
-    
     ########
     # input 
     ########
-    
     # read search from arguments
     MAX_WAITING_TIME = 10000
     parser = argparse.ArgumentParser()
@@ -317,11 +300,10 @@ def main():
                 except Exception as e:
                     print(f'Error occured: {e}')
                         
-                    #########
-                    # output
-                    #########
+        #########
+        # output
+        #########
         business_list.save_to_excel(f"google_maps_data_{search_for}".replace(' ', '_'))
-        #business_list.save_to_csv(f"google_maps_data_{search_for}".replace(' ', '_'))
 
         browser.close()
 
