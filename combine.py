@@ -33,7 +33,7 @@ def main():
     args = parser.parse_args()
 
     # Folder where the Excel files are located
-    folder = "output"
+    folder = "dedup2"
     if not os.path.exists(folder):
         print(f"Error: Folder '{folder}' does not exist.")
         sys.exit(1)

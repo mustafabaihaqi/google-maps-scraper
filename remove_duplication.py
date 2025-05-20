@@ -6,9 +6,9 @@ def remove_duplicates(input_file, output_file):
     # Load the Excel file
     df = pd.read_excel(input_file)
     
-    # Check if 'name' column exists
-    if 'name' not in df.columns:
-        print("Error: The 'name' column is missing from the file.")
+    # Check if 'name' or 'address' column exists
+    if 'name' not in df.columns or 'address' not in df.columns:
+        print("Error: The 'name' or 'address' column is missing from the file.")
         return
     
     # Remove rows based on the absence duplication and of 'name' and 'address' column's value from an Excel file, keeping the first occurrence

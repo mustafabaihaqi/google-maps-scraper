@@ -14,7 +14,7 @@ This is simple scraper that uses Playwright to extract data from Google Maps. In
 If you want to retrieve more than the default limit of 120 results, make your search queries in input.txt more specific and detailed. For example:
 - Instead of a broad query like:
 `Australia restaurant`
--Use more targeted searches such as:
+- Use more targeted searches such as:
 `Australia Brisbane restaurant`
 `Australia Sydney restaurant`
 `Australia Perth restaurant`

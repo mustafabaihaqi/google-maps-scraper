@@ -12,7 +12,6 @@ class Business:
     address: str = None
     website: str = None
     phone_number: str = None
-    reviews_count: int = None
     reviews_average: float = None
     latitude: float = None
     longitude: float = None
@@ -165,7 +164,6 @@ def main():
                     address_xpath = '//button[@data-item-id="address"]//div[contains(@class, "fontBodyMedium")]'
                     website_xpath = '//a[@data-item-id="authority"]//div[contains(@class, "fontBodyMedium")]'
                     phone_number_xpath = '//button[contains(@data-item-id, "phone:tel:")]//div[contains(@class, "fontBodyMedium")]'
-                    review_count_xpath = '//div[@jsaction="pane.reviewChart.moreReviews"]//span'
                     reviews_average_xpath = '//div[@jsaction="pane.reviewChart.moreReviews"]//div[@role="img"]'
                     permanently_closed_xpath = '//div/span/span[contains(text(), "Tutup permanen")]'
                     latest_review_date_xpath = '//div[contains(@class,"XiKgde")]/div[1]/div[1]/div[1]/div[4]/div[1]/span[contains(text(), "lalu")]'
@@ -197,15 +195,15 @@ def main():
                         business.phone_number = page.locator(phone_number_xpath).all()[0].inner_text()
                     else:
                         business.phone_number = ""
-                    if page.locator(review_count_xpath).count() > 0:
-                        business.reviews_count = int(
-                            page.locator(review_count_xpath).inner_text()
-                            .split()[0]
-                            .replace(',', '')
-                            .strip()
-                        )
-                    else:
-                        business.reviews_count = ""
+                    # if page.locator(review_count_xpath).count() > 0:
+                    #     business.reviews_count = int(
+                    #         page.locator(review_count_xpath).inner_text()
+                    #         .split()[0]
+                    #         .replace(',', '')
+                    #         .strip()
+                    #     )
+                    # else:
+                    #     business.reviews_count = ""
                     if page.locator(reviews_average_xpath).count() > 0:
                         business.reviews_average = float(
                             page.locator(reviews_average_xpath).get_attribute(name_attibute)
